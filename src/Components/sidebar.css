@@ -1,0 +1,80 @@
+.sidebar {
+  width: 30px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #EFEFEF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #AAA;
+}
+
+.sidebar > div {
+  padding: 5px;
+}
+
+.slider {
+  z-index: 3;
+}
+
+.color {
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  background: #999;
+  border: 1px solid #555;
+}
+
+.color-wrapper {
+  background: url("/assets/transparentbg.png");
+  background-size: contain;
+}
+
+.popover {
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tool {
+  margin: 2px 0;
+  border-top: 1px solid rgba(255, 255, 255, .0);
+  border-bottom: 1px solid rgba(255, 255, 255, .0);
+  transition: all 0.15s ease;
+}
+
+.tool img {
+  width: 100%;
+}
+
+.tool:hover {
+  background: rgba(100, 100, 100, .1);
+  border-top: 1px solid rgba(100, 100, 100, .5);
+  border-bottom: 1px solid rgba(100, 100, 100, .5);
+  cursor: pointer;
+}
+
+.tool.selected {
+  background: rgba(100, 100, 100, .2);
+  border-top: 1px solid rgba(90, 90, 90, .3);
+  border-bottom: 1px solid rgba(90, 90, 90, .3);
+}
+
+.sliderWrapper {
+  background: #EFEFEF;
+  padding: 10px;
+  position: absolute;
+  left: 31px;
+  border: 1px solid #AAA;
+}

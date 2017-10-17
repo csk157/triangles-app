@@ -1,0 +1,49 @@
+{
+  "name": "triangles-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint . && preact test",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build --no-prerender",
+    "serve": "preact build --no-prerender && preact serve",
+    "dev": "preact watch",
+    "precommit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "lint-staged": {
+    "src/*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-synacor": "^1.1.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "husky": "^0.14.3",
+    "if-env": "^1.0.0",
+    "lint-staged": "^4.2.3",
+    "preact-cli": "^1.4.1",
+    "prettier": "1.7.4"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "preact-router": "^2.5.7",
+    "react-color": "^2.13.8",
+    "triangles-editor": "csk157/triangles-editor"
+  }
+}
