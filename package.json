@@ -4,20 +4,38 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "eslint . && preact test",
+    "test": "jest src",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build --no-prerender",
     "serve": "preact build --no-prerender && preact serve",
     "dev": "preact watch",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "lint": "eslint src/*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "eslintConfig": {
-    "plugins": [
-      "prettier"
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "prettier/standard"
     ],
+    "plugins": [
+      "react",
+      "prettier",
+      "standard"
+    ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
     "rules": {
       "prettier/prettier": "error"
     }
@@ -30,10 +48,14 @@
   },
   "devDependencies": {
     "eslint": "^4.6.1",
+    "eslint-config-prettier": "^2.6.0",
     "eslint-config-synacor": "^1.1.1",
     "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "if-env": "^1.0.0",
+    "jest": "^21.2.1",
     "lint-staged": "^4.2.3",
     "preact-cli": "^1.4.1",
     "prettier": "1.7.4"

@@ -1,6 +1,6 @@
-import { Component } from 'preact';
-import TriangleEditor from 'triangles-editor';
-import { TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER } from '../tools';
+import { Component } from "preact";
+import TriangleEditor from "triangles-editor";
+import { TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER } from "../tools";
 
 function eventToElementPoint(e) {
   return {
@@ -108,11 +108,11 @@ export default class Editor extends Component {
   }
 
   getCursor(size) {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = size;
     canvas.height = size;
 
-    const context = canvas.getContext('2d');
+    const context = canvas.getContext("2d");
     context.strokeRect(1, 1, size - 2, size - 2);
 
     return canvas.toDataURL();

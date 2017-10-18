@@ -32,7 +32,7 @@ export default class App extends Component {
 
   onChangeColor(color) {
     console.log(color);
-    this.setState({ color: color });
+    this.setState({ color });
   }
 
   onChangeBackgroundColor(color) {

@@ -1,9 +1,9 @@
-import { Component } from 'preact';
-import classNames from 'classnames';
-import { ChromePicker } from 'react-color';
-import { TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER } from '../tools';
+import { Component } from "preact";
+import classNames from "classnames";
+import { ChromePicker } from "react-color";
+import { TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER } from "../tools";
 
-import './sidebar.css';
+import "./sidebar.css";
 
 export default class Sidebar extends Component {
   constructor(props) {
@@ -48,7 +48,8 @@ export default class Sidebar extends Component {
   }
 
   colorToCSS(color) {
-    return `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`;
+    return `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb
+      .a})`;
   }
 
   render({
@@ -72,7 +73,7 @@ export default class Sidebar extends Component {
         </div>
 
         <div
-          className={classNames('tool', { selected: tool === TOOL_PENCIL })}
+          className={classNames("tool", { selected: tool === TOOL_PENCIL })}
           role="button"
           onClick={() => onChangeTool(TOOL_PENCIL)}
         >
@@ -80,7 +81,7 @@ export default class Sidebar extends Component {
         </div>
 
         <div
-          className={classNames('tool', { selected: tool === TOOL_BRUSH })}
+          className={classNames("tool", { selected: tool === TOOL_BRUSH })}
           role="button"
           onClick={() => onChangeTool(TOOL_BRUSH)}
         >
@@ -88,7 +89,7 @@ export default class Sidebar extends Component {
         </div>
 
         <div
-          className={classNames('tool', { selected: tool === TOOL_ERASER })}
+          className={classNames("tool", { selected: tool === TOOL_ERASER })}
           role="button"
           onClick={() => onChangeTool(TOOL_ERASER)}
         >
@@ -129,7 +130,10 @@ export default class Sidebar extends Component {
           {this.state.showColorPicker ? (
             <div className="popover">
               <div className="cover" onClick={this.hideColorPicker} />
-              <ChromePicker color={color.rgb} onChangeComplete={onChangeColor} />
+              <ChromePicker
+                color={color.rgb}
+                onChangeComplete={onChangeColor}
+              />
             </div>
           ) : null}
         </div>
@@ -154,24 +158,16 @@ export default class Sidebar extends Component {
           ) : null}
         </div>
 
-        <div
-          className="tool"
-          role="button"
-          onClick={onSave}
-        >
+        <div className="tool" role="button" onClick={onSave}>
+          <img src="/assets/download.svg" />
+        </div>
+
+        <div className="tool" role="button" onClick={onSaveSvg}>
           <img src="/assets/download.svg" />
         </div>
 
         <div
-          className="tool"
-          role="button"
-          onClick={onSaveSvg}
-        >
-          <img src="/assets/download.svg" />
-        </div>
-
-        <div
-          className={classNames('tool', { selected: showGrid })}
+          className={classNames("tool", { selected: showGrid })}
           role="button"
           onClick={onToggleGridVisibility}
         >

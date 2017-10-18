@@ -4,12 +4,12 @@
   position: fixed;
   left: 0;
   top: 0;
-  background: #EFEFEF;
+  background: #efefef;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid #AAA;
+  border-right: 1px solid #aaa;
 }
 
 .sidebar > div {
@@ -49,8 +49,8 @@
 
 .tool {
   margin: 2px 0;
-  border-top: 1px solid rgba(255, 255, 255, .0);
-  border-bottom: 1px solid rgba(255, 255, 255, .0);
+  border-top: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: all 0.15s ease;
 }
 
@@ -59,22 +59,22 @@
 }
 
 .tool:hover {
-  background: rgba(100, 100, 100, .1);
-  border-top: 1px solid rgba(100, 100, 100, .5);
-  border-bottom: 1px solid rgba(100, 100, 100, .5);
+  background: rgba(100, 100, 100, 0.1);
+  border-top: 1px solid rgba(100, 100, 100, 0.5);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
   cursor: pointer;
 }
 
 .tool.selected {
-  background: rgba(100, 100, 100, .2);
-  border-top: 1px solid rgba(90, 90, 90, .3);
-  border-bottom: 1px solid rgba(90, 90, 90, .3);
+  background: rgba(100, 100, 100, 0.2);
+  border-top: 1px solid rgba(90, 90, 90, 0.3);
+  border-bottom: 1px solid rgba(90, 90, 90, 0.3);
 }
 
 .sliderWrapper {
-  background: #EFEFEF;
+  background: #efefef;
   padding: 10px;
   position: absolute;
   left: 31px;
-  border: 1px solid #AAA;
+  border: 1px solid #aaa;
 }
